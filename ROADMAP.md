@@ -11,7 +11,7 @@ stay true until something changes are written here.
 
 ## Now
 
-The design is approved and the repository is set up. M1 below is next. The m3l-design change that site images need (M0) is not started, and it has no issue yet.
+The design is approved and the repository is set up. M1 below is next. The m3l-design change that site images need (M0) is tracked in [m3l-design#66](https://github.com/monte3l/m3l-design/issues/66) and is not started.
 
 ## Next 12 months
 
