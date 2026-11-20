@@ -1,9 +1,9 @@
 {
   "name": "m3l-blueprinter",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "TODO: describe m3l-blueprinter (bootstrapped by m3l-groundwork).",
+  "description": "A Claude Code plugin that interviews you, then writes design docs, decision records and C4 architecture diagrams for your project, checked against organization policy by a lint",
   "packageManager": "pnpm@12.8.1",
   "engines": {
     "node": ">=24"

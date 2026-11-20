@@ -4,8 +4,8 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "package-name": "REPLACE-WITH-PLUGIN-NAME",
-      "component": "REPLACE-WITH-PLUGIN-NAME",
+      "package-name": "m3l-blueprinter",
+      "component": "m3l-blueprinter",
       "include-component-in-tag": true,
       "tag-separator": "--",
       "draft": true,
