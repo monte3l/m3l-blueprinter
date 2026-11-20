@@ -25,7 +25,7 @@ Once it is implemented, the owner will run it on every sibling repository: m3l-g
 - Writing or changing the code a project contains. The scope is documents and diagrams only.
 - Reviewing whether an architecture is good.
 - Running on all repositories at once. Each repository is its own session and its own pull request.
-- Shipping any text from the arc42 template, which is licensed CC BY-SA 4.0 while this plugin is MIT.
+- Shipping any text from the arc42 template, which carries a share-alike Creative Commons licence while this plugin is MIT.
 
 ## Design
 
@@ -90,7 +90,7 @@ The pack is fetched from `<org>/.github/blueprint/blueprinter/pack.json` with th
 
 ### Licensing of templates
 
-The architecture document uses the plugin's own headings and guidance text and ends with one credit line, "Section structure inspired by arc42 (arc42.org)". No arc42 template text is bundled, and a contract test fails if a template contains known arc42 phrases. The MADR template is MIT and CC0 and ships as is. The design-document structure is a public practice, so the plugin writes its own text. D2 (MPL-2.0) is an unmodified optional dependency.
+The architecture document uses the plugin's own headings and guidance text and ends with one credit line, "Section structure inspired by arc42 (arc42.org)". No arc42 template text is bundled, and a contract test fails if a template contains known arc42 phrases. The MADR template is MIT and CC0 and ships as is. The design-document structure is a public practice, so the plugin writes its own text. D2 is an unmodified optional dependency under the Mozilla Public License, version 2, and is recorded in the REUSE data.
 
 ## Alternatives considered
 

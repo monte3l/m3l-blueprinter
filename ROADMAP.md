@@ -46,5 +46,5 @@ What would change the plan: if the D2 renderer proves too heavy or unstable, M2 
 - **Write or change the code it documents.** It produces documents and diagrams only, so a design can be reviewed before anything is built.
 - **Fetch anything while it checks.** The check must give the same answer in CI as on a laptop.
 - **Edit an accepted decision record.** A decision is replaced by a new record that supersedes it.
-- **Ship the arc42 template text.** That template is licensed CC BY-SA 4.0, and this plugin is MIT. It writes its own headings and credits arc42.
+- **Ship the arc42 template text.** That template carries a share-alike Creative Commons licence, and this plugin is MIT. It writes its own headings and credits arc42.
 - **Run on every repository at once.** The interview needs the owner's answers, so each repository is its own session and its own pull request.
