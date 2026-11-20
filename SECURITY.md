@@ -49,6 +49,9 @@ Dependency Review fails a pull request that adds a dependency with a high or cri
 
 Background, not policy: this explains the Scorecard results for anyone who looks them up. `scorecard.yml` runs weekly and surfaces its findings as Code Scanning alerts. A new repository gets several on its first run (Maintained, Fuzzing and others it cannot satisfy yet). One that is dismissed instead of fixed is listed here with the reason, and the dismissal cites this section. Do not turn a dismissed finding into a standing bypass.
 
-| Check    | Score | Why it stays |
-| -------- | ----- | ------------ |
-| None yet |       |              |
+| Check             | Score | Why it stays                                                                                                                                                                                                                                                                                  |
+| ----------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Branch-Protection | 8     | The top tier asks for two approvals. The organization has two members, so a pull request has one reviewer who is not its author, and requiring two would block every merge unless a standing bypass existed. The `main` ruleset has no bypass actor on purpose                                |
+| Code-Review       | 6     | The first commit, written by `bin/new-repo.sh`, landed before the `main` ruleset existed, so it has no approval. Every pull request since needs a code-owner approval, so the approved share rises as pull requests merge                                                                     |
+| Maintained        | 0     | Scorecard scores any repository under 90 days old as 0. This one was created on 2026-11-20, so it resolves itself in mid-February 2027                                                                                                                                                        |
+| Fuzzing           | 0     | Not applicable yet. The repository has no parser of untrusted input: it holds no code beyond the scaffold. The planned inputs are the owner's interview answers, local JSON files and a policy pack read as data. Revisit this when the lint and its file parsers land in the first milestone |
