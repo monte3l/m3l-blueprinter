@@ -90,7 +90,7 @@ The pack is fetched from `<org>/.github/blueprint/blueprinter/pack.json` with th
 
 ### Licensing of templates
 
-The architecture document uses the plugin's own headings and guidance text and ends with one credit line, "Section structure inspired by arc42 (arc42.org)". No arc42 template text is bundled, and a contract test fails if a template contains known arc42 phrases. The MADR template is MIT and CC0 and ships as is. The design-document structure is a public practice, so the plugin writes its own text. D2 is an unmodified optional dependency under the Mozilla Public License, version 2, and is recorded in the REUSE data.
+The architecture document uses the plugin's own headings and guidance text and ends with one credit line, "Section structure inspired by arc42 (arc42.org)". No arc42 template text is bundled, and a contract test fails if a template contains known arc42 phrases. The MADR template is MIT and CC0 and ships as is. The design-document structure is a public practice, so the plugin writes its own text. D2 is an unmodified optional dependency under a file-level copyleft licence, and is recorded in the REUSE data.
 
 ## Alternatives considered
 
