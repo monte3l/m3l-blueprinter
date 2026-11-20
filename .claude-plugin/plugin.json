@@ -1,0 +1,21 @@
+{
+  "name": "m3l-blueprinter",
+  "version": "0.0.0",
+  "description": "A Claude Code plugin that interviews you, then writes design docs, decision records and C4 architecture diagrams for your project, checked against organization policy by a lint",
+  "author": {
+    "name": "Enrico Lionello",
+    "email": "enri3l@monte3l.com"
+  },
+  "homepage": "https://blueprinter.monte3l.com",
+  "repository": "https://github.com/monte3l/m3l-blueprinter",
+  "license": "MIT",
+  "keywords": [
+    "adr",
+    "architecture",
+    "c4-model",
+    "claude-code",
+    "claude-code-plugin",
+    "diagrams",
+    "documentation"
+  ]
+}

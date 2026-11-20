@@ -1,19 +1,31 @@
-# Starting point for .github/dependency-review-config.yml, read by
-# workflow-templates/dependency-review.yml (the action's `config-file` input).
+# Packages this project exempts from the license check by package URL, read by
+# .github/workflows/dependency-review.yml (the action's `config-file` input).
+# The allowed licenses are in the workflow.
 #
-# The licenses that are allowed are in the workflow and are the same everywhere.
-# This file holds only what is specific to this repository: packages exempted
-# from the license check by package URL. Do it for a tool the project runs but
-# never ships (a deploy CLI and its platform binaries), after checking that the
-# project can accept the terms. Never add a license for it to the workflow.
-#
-# Keep at least one key: the action fails on an empty file, and on a missing one.
-# A repository that marks files with inline SPDX headers (no catch-all REUSE
-# annotation) starts this file with its two header lines: REUSE and the license
-# header check both fail on a file without them.
-# A list set in the workflow itself would override this one, so do not set it
-# there. Example:
+# Exempt a tool the project runs but never ships (a deploy CLI and its platform
+# binaries), by package URL, after checking that the project can accept its
+# terms. Do not add a license to the workflow for it. Example:
 #
 #   allow-dependencies-licenses:
 #     - pkg:npm/%40img/sharp-libvips-linux-x64
-allow-dependencies-licenses: []
+#
+# Keep at least one key: the action fails on an empty file.
+#
+# Starting entries: lightningcss and its platform builds come in through the
+# test runner's bundler, carry a file-level copyleft licence, and are only used
+# to build and test: nothing here modifies or ships them. A package URL without
+# a version covers every version, so a bump does not need a new entry, but a
+# new platform build does. Delete them if the project drops that toolchain.
+allow-dependencies-licenses:
+  - pkg:npm/lightningcss
+  - pkg:npm/lightningcss-android-arm64
+  - pkg:npm/lightningcss-darwin-arm64
+  - pkg:npm/lightningcss-darwin-x64
+  - pkg:npm/lightningcss-freebsd-x64
+  - pkg:npm/lightningcss-linux-arm-gnueabihf
+  - pkg:npm/lightningcss-linux-arm64-gnu
+  - pkg:npm/lightningcss-linux-arm64-musl
+  - pkg:npm/lightningcss-linux-x64-gnu
+  - pkg:npm/lightningcss-linux-x64-musl
+  - pkg:npm/lightningcss-win32-arm64-msvc
+  - pkg:npm/lightningcss-win32-x64-msvc

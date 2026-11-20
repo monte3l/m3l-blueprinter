@@ -1,22 +1,17 @@
 # Security Policy
 
-<!-- Starting point for SECURITY.md. `m3l-blueprinter` is replaced by `bin/new-repo.sh`;
-     replace every other placeholder in braces by hand and delete this comment. The
-     advisory URL must stay absolute: a repository that inherits the org default
-     scores 4 on Scorecard's Security-Policy check. -->
-
 ## Scope
 
-This covers `m3l-blueprinter`: {what it contains, and which part of it carries the main risk, in two sentences}.
+This covers `m3l-blueprinter`: a Claude Code plugin, planned and not built yet, with skills, one read-only agent and a command line tool that read a project's files and write design documents, decision records and diagrams into it, plus a planned npm package that ships the same command line tool. The main risk is input it will read and then act on: a policy pack fetched from an organization repository, and the contents of the project it documents.
 
 ## Supported versions
 
-| Version | Supported |
-| --- | --- |
-| {Latest release, or the latest commit on `main`} | Yes |
-| Anything else | No |
+| Version                                                                      | Supported |
+| ---------------------------------------------------------------------------- | --------- |
+| The latest release, or the latest commit on `main` while there is no release | Yes       |
+| Anything else                                                                | No        |
 
-{One sentence on who maintains it and what that means for fixes.}
+The monte3l maintainers look after it, so a fix lands on `main` and ships in the next release, and an older release is not patched.
 
 ## Reporting a vulnerability
 
@@ -37,9 +32,14 @@ Include the affected version, the steps to reproduce and the impact you think it
 
 ## What you can and cannot expect
 
-**What this project guarantees.** {The properties a reader can rely on, each one checked by something in CI.}
+**What this project guarantees.** These are the design's properties, and each becomes a test in the first milestone, so this list is a target until then:
 
-**What it does not guarantee.** {What is out of scope, so a reader does not assume it.}
+- **A policy pack is data.** It is checked against a schema, its text is length-capped, and nothing in it is followed as an instruction.
+- **The check needs no network.** `m3l-blueprinter check` reads only the files in the repository, so a CI run is reproducible.
+- **Writes stay in the documentation tree.** The skills write only under `docs/`, `.blueprinter/` and `.blueprinter.json`, plus the docs site's `docs.config.mjs` entries where a site exists, and only after the owner answers the interview.
+- **An accepted decision record is never edited.** The check compares it with a recorded hash.
+
+**What it does not guarantee.** It does not review the architecture it documents, it does not make the documentation correct, and it does not protect a project from a malicious policy pack that its owner chose to trust. The surveyor agent reads the code but cannot run it.
 
 ## Dependency and code-scanning findings
 
@@ -49,6 +49,6 @@ Dependency Review fails a pull request that adds a dependency with a high or cri
 
 Background, not policy: this explains the Scorecard results for anyone who looks them up. `scorecard.yml` runs weekly and surfaces its findings as Code Scanning alerts. A new repository gets several on its first run (Maintained, Fuzzing and others it cannot satisfy yet). One that is dismissed instead of fixed is listed here with the reason, and the dismissal cites this section. Do not turn a dismissed finding into a standing bypass.
 
-| Check | Score | Why it stays |
-| --- | --- | --- |
-| None yet | | |
+| Check    | Score | Why it stays |
+| -------- | ----- | ------------ |
+| None yet |       |              |

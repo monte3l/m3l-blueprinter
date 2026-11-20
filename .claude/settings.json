@@ -44,6 +44,13 @@
             "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard-hub-src-writes.mjs\"",
             "onFailure": "block",
             "timeout": 30
+          },
+          {
+            "type": "command",
+            "if": "Bash(git *)",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard-shared-checkout.mjs\"",
+            "timeout": 30,
+            "onFailure": "block"
           }
         ]
       },
@@ -83,6 +90,12 @@
             "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard-secret-writes.mjs\"",
             "onFailure": "block",
             "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/guard-shared-checkout.mjs\"",
+            "timeout": 30,
+            "onFailure": "block"
           }
         ]
       }
