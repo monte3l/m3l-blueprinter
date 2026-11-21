@@ -1,5 +1,11 @@
 # m3l-blueprinter
 
+[![CI](https://github.com/monte3l/m3l-blueprinter/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/monte3l/m3l-blueprinter/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/monte3l/m3l-blueprinter/badge)](https://securityscorecards.dev/viewer/?uri=github.com/monte3l/m3l-blueprinter)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/16961/badge)](https://www.bestpractices.dev/projects/16961)
+[![OpenSSF Baseline](https://www.bestpractices.dev/projects/16961/baseline)](https://www.bestpractices.dev/projects/16961)
+[![REUSE status](https://api.reuse.software/badge/github.com/monte3l/m3l-blueprinter)](https://api.reuse.software/info/github.com/monte3l/m3l-blueprinter)
+
 Bootstrapped by [m3l-groundwork](https://github.com/monte3l/m3l-groundwork) —
 a deterministic TypeScript + Claude Code project bootstrapper.
 
