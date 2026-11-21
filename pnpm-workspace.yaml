@@ -11,3 +11,10 @@ allowBuilds:
   # the build with a notice instead of erroring when no compiler toolchain
   # is available.
   unrs-resolver: false
+# eslint-plugin-tsdoc 0.5.4 pins @typescript-eslint/utils to ~8.56, whose parser
+# asks for minimatch ^10.2.2. That resolves to a version with a denial-of-service
+# advisory (GHSA-g3hv-75wg-m249, fixed in 11.0.1). Only this one nested copy is
+# raised, so the rest of the tree keeps the versions it declares. Remove it when
+# the plugin moves to a newer @typescript-eslint/utils.
+overrides:
+  "@typescript-eslint/typescript-estree@8.56.1>minimatch": "^11.0.1"
